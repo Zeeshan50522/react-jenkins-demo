@@ -2,7 +2,7 @@ pipeline{
     agent any
     stages{
         stage("build"){
-            step{
+            steps{
             echo "npm building..."
             nodejs('Node-16.8.0'){
                 sh "npm install"
@@ -10,7 +10,7 @@ pipeline{
           }
         }
         stage("deploy"){
-            step{
+            steps{
             echo "npm deploying..."
             nodejs("Node-16.8.0"){
                 sh "nohup npm start &"
