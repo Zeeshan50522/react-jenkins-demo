@@ -13,7 +13,7 @@ pipeline{
             steps{
             echo "npm deploying..."
             nodejs("Node-16.8.0"){
-                sh "nohup npm start &"
+                sh "npm start"
             }
           }
         }
