@@ -21,7 +21,7 @@ pipeline{
         stage("Artifacts to Nexus"){
             steps {
                 script {
-                    docker push react-frontend http://23.22.224.128:8081/repository/react-frontend/, 
+                    docker push http://23.22.224.128:8081/repository/react-frontend/, 
                     credentialsId: 'nexus-credentials', 
                     groupId: 'com.nbs.nexus', 
                     nexusUrl: '23.22.224.128:8081', 
