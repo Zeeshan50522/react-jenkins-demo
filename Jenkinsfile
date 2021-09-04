@@ -14,7 +14,7 @@ pipeline{
             echo "npm building..."
             nodejs('Node-16.8.0'){
                 sh "docker build -t react-frontend"
-                sh "docker tag react-frontend 23.22.224.128:8081/repository/react-frontend"
+                sh "docker tag react-frontend http://23.22.224.128:8081/react-frontend"
             }
           }
         }
