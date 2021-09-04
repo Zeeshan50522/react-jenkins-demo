@@ -1,13 +1,6 @@
 pipeline{
     agent any
 
-    environment {
-        NEXUS_VERSION = "nexus3"
-        NEXUS_PROTOCOL = "http"
-        NEXUS_URL = "172.17.0.3:8081"
-        NEXUS_REPOSITORY = "repository-example"
-        NEXUS_CREDENTIAL_ID = "nexus-credentials"
-    }
     stages{
         stage("build"){
             steps{
